@@ -422,7 +422,26 @@ a {
     text-align: start;
   }
   
+/*********************************Footer************************/
 
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 70%;
+}
+.section-title {
+    margin: 0 0 20px;
+    font-size: 22px;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+  }
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
