@@ -55,45 +55,52 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-    
+  height: 50px;
 }
 
 .logo img {
-    
-    width: 62px;
-    height: 20px;
- }
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  margin: 10px;
-  padding: 0;
-
-}
-.menu li {
-    margin-left: 80px; /* Marge entre les liens */
+  width: 61px;
+  height: 19px;
 }
 
-.menu a {
-  text-decoration: none;
-  color: black;
-  padding: 15px 0;
-  border-top: 2px solid transparent;
-  transition: border-top 0.3s;
-  
-}
-
-.menu a:active { 
-  color: blue;
+nav ul {
+list-style-type: none;
+display: flex;
 
 }
 
-.menu a:hover { /* Couleur bleu lors du clic */
-  border-top: 2px solid #0065FC;
-  cursor: pointer;
+.menu li{
+margin-left: 60px
 }
- .search-container{
+
+nav ul ::after{
+content:"";
+display: table;
+clear: both;
+}
+
+nav a{
+display: block;
+text-decoration: none;
+color: black;
+}
+
+nav a:hover{
+border-top: solid 2px #0065FC;
+
+}
+
+nav a{
+border-top: solid 2px transparent;
+
+}
+
+nav a{
+border-top: solid 2px transparent;
+padding: 15px 0px;
+
+}
+.search-container{
     margin-bottom: 30px;
 }
 
@@ -489,28 +496,9 @@ flex-wrap: wrap;
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-header{
-  flex-direction: column;
-  align-items: center;
-  margin-right: 80px;
-}
 
-nav ul{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.logo{
-  margin-bottom: 20px;
-  width: 100%;
-}
 
- nav li:hover {
-  border-top: solid 2px #0065FC;
-  cursor: pointer;    
-  margin: 0;
-  margin-top: -34px;
-}
+
 .filters-container {
   display: flex;
   justify-content: space-between;
@@ -598,11 +586,17 @@ nav ul{
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-.logo{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
+  .section-title  h1{
+    margin: 0;
+    font-size: 22px;
+    width: 100%;
+    
+}
+
+  header {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
   
 .menu ul {
@@ -613,17 +607,7 @@ nav ul{
   padding: 10px 0;
 }
 
-.menu li {
-  margin-left: 80px; /* Marge entre les liens */
-}
 
-.menu a {
-  display: block;
-  text-align: center;
-  width: 100%;
-  padding: 10px 0; /* Augmente la taille des liens */
-  position: relative;
-}
 
 .menu a::before {
   content: "";
