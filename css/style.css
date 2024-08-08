@@ -51,59 +51,48 @@ a {
     color: var(--main-bg-color)
 }
 
-header {
+.search-container{
+    margin-bottom: 30px;
+}
+
+.heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
+  padding: 2px;
 }
 
-.logo {
-  margin-left: 20px;
-}
-.logo img{
-  width: 61px;
-  height: 19px;
+.heading .logo {
+  width: 60px;
 }
 
-.menu {
-
-  display: flex;
-  justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
+.heading .menu {
+ display: flex;
 }
 
-.menu ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin: 0 10px;
-}
-
-.menu a {
+.menu .item-menu {
+  padding: 20px;
   text-decoration: none;
   color: black;
-  padding: 5px;
+  font-size: 18px;
   position: relative;
 }
 
-.menu a:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -25px;
-  height: 2px;
-  background-color: #0065FC;
+.heading a{
+  text-decoration: none;
+  padding: 20px;
+  color: black;
+  display: inline-block;
+}
+.heading a:hover {
+  border-top: 2px solid transparent;
+  border-top: 2px solid #0065fc;
+  color: #0065FC;
+  padding-top: 18px;
 }
 
-.search-container{
-    margin-bottom: 30px;
+.menu .trait-gris {
+  color: gray;
 }
 
 form {
@@ -622,47 +611,34 @@ button::before {
     width: 100%;
     
 }
+.heading  {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
-header {
-  display: block;
+.heading .menu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 16px;
+  
+}
+.heading a:hover {
+  border-top: none;
+}
+
+.heading .menu .item-menu {
   text-align: center;
+  width: 50%;
+  border-bottom: #f2f2f2 3px solid;
 }
 
-.logo {
-  margin: 0;
-  width: 100%;
+.heading .item-menu:hover {
+  border-top: none;
+  border-bottom: #0065fc 3px solid;
+  color: #0065fc;
 }
-
-.logo img {
-  width: 61px;
-  height: 19px;
-}
-
-.menu ul {
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-.menu li {
-  margin: 10px 0;
-}
-
-.menu a::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: lightblue;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.menu a:hover::after {
-  background-color: darkblue;
-  height: 1px;
-}
-
 .search-container{
   display: flex;
   justify-content: center;
@@ -684,8 +660,8 @@ input {
 
 h1{
   width: 50%;
-  font-size: 18px; /* Ajustez cette valeur pour forcer le titre à occuper deux lignes */
-  line-height: 1.2; /* Ajustez cette valeur pour l'espacement entre les lignes si nécessaire */
+  font-size: 18px; 
+  line-height: 1.2; 
   }
 .container p{
   font-size: 15px;
@@ -810,7 +786,7 @@ h1{
   width: 100%;
   font-size: 16px;
   margin-top: 30px;
-  font-weight: 900px;   
+  font-weight: 700;  
   white-space: nowrap;
   margin-bottom: 0px;
 }
